@@ -267,11 +267,6 @@ public class Blackjack {
                     System.out.println("[CONSOLE] You say: ");
                 }while (bet <= 0);
             }
-            do {
-                System.out.println("[CONSOLE] You don't have that much!");
-                System.out.print("[CONSOLE] You say: ");
-                bet = Scanner.nextInt();
-            }while (bet > cash);
             cash = cash - bet;
             TimeUnit.SECONDS.sleep(3);
             System.out.println("You put " + bet + " tokens on the table.");
