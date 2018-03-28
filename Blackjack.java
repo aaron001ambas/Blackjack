@@ -264,7 +264,8 @@ public class Blackjack {
                     System.out.println("[CONSOLE] The dealer says \"I don't understand.\"");
                     TimeUnit.SECONDS.sleep(1);
                     System.out.println("[CONSOLE] The dealer says \"How much would you like to bet?\"");
-                    System.out.println("[CONSOLE] You say: ");
+                    System.out.print("[CONSOLE] You say: ");
+                    bet = Scanner.nextInt();
                 }while (bet > cash || bet <= 0);
             }
             cash = cash - bet;
