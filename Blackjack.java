@@ -291,7 +291,7 @@ public class Blackjack {
 
             System.out.print("[CONSOLE] Hit or Stand?: ");
             decision = Scanner.next();
-
+            decision = decision.toLowerCase();
             // Dealer's logic
 
             if (dealersHandValue <= 10) {
@@ -305,8 +305,9 @@ public class Blackjack {
                 System.out.println("[CONSOLE] The dealer stands.");
             }
 
-            if(decision.equals("Hit")) {
+            if(decision.equals("hit")) {
                 yourThirdCard = drawCard();
+                decision = decision.toLowerCase();
                 yourHandValue = yourHandValue + getHandValue(yourThirdCard, yourHandValue);
                 System.out.println("[CONSOLE] Your hand is " + yourFirstCard + ", " + yourSecondCard +
                         ", and " + yourThirdCard + ".");
@@ -331,8 +332,9 @@ public class Blackjack {
                 if (yourHandValue < 21) {
                     System.out.print("[CONSOLE] Hit or Stand?: ");
                     decision = Scanner.next();
-                    if(decision.equals("Hit")) {
+                    if(decision.equals("hit")) {
                         yourFourthCard = drawCard();
+                        decision = decision.toLowerCase();
                         yourHandValue = yourHandValue + getHandValue(yourFourthCard, yourHandValue);
                         System.out.println("[CONSOLE] Your hand is " + yourFirstCard + ", " + yourSecondCard + 
                                 ", " + yourThirdCard + ", and " + yourFourthCard + ".");
@@ -355,7 +357,7 @@ public class Blackjack {
                             System.out.println("[CONSOLE] You now have " + cash + " tokens.");
                         }
                     } else {
-                if (decision.equals("Stand")) {
+                if (decision.equals("stand")) {
                     if (yourHandValue > dealersHandValue) {
                         bet = bet * 2;
                         System.out.println("[ALERT] Your total hand value is: " + yourHandValue + ".");
@@ -385,7 +387,7 @@ public class Blackjack {
             }
                 }
             } else {
-                if (decision.equals("Stand")) {
+                if (decision.equals("stand")) {
                     if (yourHandValue > dealersHandValue) {
                         bet = bet * 2;
                         System.out.println("[ALERT] Your total hand value is: " + yourHandValue + ".");
