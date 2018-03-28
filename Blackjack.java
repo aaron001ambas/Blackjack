@@ -28,6 +28,12 @@ public class Blackjack {
     static int cash = 0;
     static int bet = 0;
     static String playAgain = "";
+	
+	public static void clear() {
+		for(int x = 0; x <= 99; x++) {
+			System.out.println();
+		}
+	}
     
     public static String drawCard() {
             // do is used such that card will keep randomizing until it is a unique card
@@ -153,97 +159,22 @@ public class Blackjack {
             }while (cash <= 0);
         }
         try {
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
+            clear();
             System.out.print(".");
             TimeUnit.SECONDS.sleep(1);
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
+            clear();
             System.out.print("..");            
             TimeUnit.SECONDS.sleep(1);    
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
+            clear();
             System.out.print("...");
             TimeUnit.SECONDS.sleep(1);
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();            
+            clear();           
         } catch (InterruptedException ex) {
             Logger.getLogger(Blackjack.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         System.out.println("[CONSOLE] ... You say \"" + cash + " dollars worth of tokens, please.\"");
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
+        clear();
         System.out.println("[CONSOLE] The cashier hands you " + cash + " dollars worth of tokens.");
         System.out.println();
         TimeUnit.SECONDS.sleep(1);
